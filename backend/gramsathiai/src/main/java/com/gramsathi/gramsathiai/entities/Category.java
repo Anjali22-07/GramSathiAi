@@ -7,5 +7,6 @@ public enum Category {
     SC,
     ST,
     PVTG,
-    DNT
+    DNT,
+    ANY
 }

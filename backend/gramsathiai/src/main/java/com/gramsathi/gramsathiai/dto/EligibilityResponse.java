@@ -1,5 +1,20 @@
-package com.gramsathi.gramsathiai.Dto;
+package com.gramsathi.gramsathiai.dto;
 
+import java.util.List;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class EligibilityResponse {
+
+    private int totalEligibleSchemes;
+    private List<SchemeResponse> eligibleSchemes;
+    private String AiResponse;
 
 }

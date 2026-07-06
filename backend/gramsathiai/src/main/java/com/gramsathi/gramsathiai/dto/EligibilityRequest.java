@@ -1,4 +1,4 @@
-package com.gramsathi.gramsathiai.Dto;
+package com.gramsathi.gramsathiai.dto;
 
 import com.gramsathi.gramsathiai.entities.Category;
 import com.gramsathi.gramsathiai.entities.Gender;
@@ -17,6 +17,7 @@ public class EligibilityRequest {
    
     private Gender gender;
     private int age;
+    private int income;
     private Occupation occupation;
     private String state;
     private Category category;

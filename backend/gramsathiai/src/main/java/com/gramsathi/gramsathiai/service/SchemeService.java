@@ -1,12 +1,11 @@
 package com.gramsathi.gramsathiai.service;
 
-
-import com.gramsathi.gramsathiai.dto.EligibilityRequest;
-import com.gramsathi.gramsathiai.dto.EligibilityResponse;
-
+import java.util.List;
+import com.gramsathi.gramsathiai.dto.SchemeDto;
 
 public interface SchemeService {
 
-     public EligibilityResponse returnScheme(EligibilityRequest eligibilityRequest);
+    public void saveScheme(SchemeDto schemeDto);
+    public List<SchemeDto> getAllSchemes();
 
 }

@@ -6,5 +6,6 @@ public enum Occupation {
      FARMER,
      JOB,
      UNEMPLOYED,
+     STUDENT,
      ANY
 }
