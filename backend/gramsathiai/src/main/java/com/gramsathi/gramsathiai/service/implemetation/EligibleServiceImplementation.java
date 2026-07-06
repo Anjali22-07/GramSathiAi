@@ -39,13 +39,15 @@ public class EligibleServiceImplementation implements  EligibileService{
                 SchemeResponse sResponse=  mapper.map(scheme, SchemeResponse.class);
                 eligibleSchemes.add(sResponse);
 
+
               }
             }
 
               EligibilityResponse response = new EligibilityResponse();
               response.setEligibleSchemes(eligibleSchemes);
+                response.setTotalEligibleSchemes(eligibleSchemes.size());
               return response;        
-
+             
     }
 
 }
