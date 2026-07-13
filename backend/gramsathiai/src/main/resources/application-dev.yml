@@ -21,3 +21,9 @@ spring:
 logging:
       level:
          org.springframework.security: DEBUG
+  
+
+spring.ai:
+   google:
+      genai:
+        api-key: ${API_KEY}

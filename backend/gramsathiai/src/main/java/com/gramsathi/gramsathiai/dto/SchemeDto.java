@@ -4,8 +4,6 @@ import java.util.UUID;
 import com.gramsathi.gramsathiai.entities.Category;
 import com.gramsathi.gramsathiai.entities.Gender;
 import com.gramsathi.gramsathiai.entities.Occupation;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

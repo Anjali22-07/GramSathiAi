@@ -2,4 +2,7 @@ spring:
   application:
          name: gramsathiai
 
+  profiles:
+    active: dev
+
 
