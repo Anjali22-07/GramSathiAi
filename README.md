@@ -125,15 +125,15 @@ Which government schemes am I eligible for?
 
 ### Home Page
 
-![Home Page](screenshot(164).png)
+![Home Page](Screenshot(164).png)
 
 ### AI Chatbot
 
-![Chatbot](screenshot(165).png)
+![Chatbot](Screenshot(165).png)
 
-### Eligibility Results
+### Eligibility Form
 
-![Results](screenshot(167).png)
+![Form](Screenshot(167).png)
 
 ## ⚙️ Installation
 
