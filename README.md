@@ -123,17 +123,17 @@ Which government schemes am I eligible for?
 
 ## 📸 Screenshots
 
-Add screenshots here.
+### Home Page
 
-```
-/screenshots/home.png
+![Home Page](screenshot(164).png)
 
-/screenshots/chat.png
+### AI Chatbot
 
-/screenshots/results.png
-```
+![Chatbot](screenshot(165).png)
 
----
+### Eligibility Results
+
+![Results](screenshot(167).png)
 
 ## ⚙️ Installation
 
