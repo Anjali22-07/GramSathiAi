@@ -37,12 +37,16 @@ function EligibilityForm() {
 };
 
     return (
-        
-  <div className="max-w-4xl mx-auto  bg-white shadow-lg rounded-xl p-8">
+      <div classname="max-w-5xl w-full mx-auto px-6">
+  <div className="bg-neutral-primary-soft border-t-6 border-gray-600 shadow-lg rounded-xl p-8">
 
-    <h2 className="text-3xl font-bold text-center mb-8 text-blue-700">
-      Find Eligible Government Schemes
-    </h2>
+    <h1 className="text-4xl font-bold text-center text-gray-700">
+    📋 Check Your Eligibility
+    </h1>
+
+    <p className="text-center text-gray-300 mt-2 mb-8">
+        Answer a few questions and discover government schemes you may qualify for.
+    </p>
 
     <form
       onSubmit={handleSubmit}
@@ -186,14 +190,14 @@ function EligibilityForm() {
       <div className="md:col-span-2">
         <button
           type="submit"
-          className="w-full bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700"
+          className="w-full bg-gray-600 text-white p-3 rounded-lg hover:bg-gray-700"
         >
           Find Schemes
         </button>
       </div>
 
     </form>
-
+   </div>
   </div>
 );
 

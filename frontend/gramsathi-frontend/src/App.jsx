@@ -1,16 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import Home from "./Pages/Home"
-import './App.css'
+import { Routes, Route } from "react-router-dom";
+
+import Home from "./Pages/Home";
+import FormPage from "./Pages/FormPage";
+import ChatPage from "./Pages/ChatPage";
 
 function App() {
-  return (
-    <div>
-      <Home />
-    </div>
-  );
+
+    return (
+
+        <Routes>
+
+            <Route path="/" element={<Home />} />
+
+            <Route path="/form" element={<FormPage />} />
+
+            <Route path="/chat" element={<ChatPage />} />
+
+        </Routes>
+
+    );
+
 }
 
 export default App;

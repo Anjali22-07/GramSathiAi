@@ -1,55 +1,77 @@
-import { useState } from "react";
-import Navbar from "../component/Navbar";
-import Hero from "../component/Hero";
-import EligibilityForm from "../component/ElgibilityForm";
-import ChatBot from "../component/ChatBot";
+import { useNavigate } from "react-router-dom";
+import logo from "../assets/logo.png";
 
-function App() {
+function Home() {
 
-  const [mode, setMode] = useState("form");
+    const navigate = useNavigate();
 
+       return (
+    <div
+        className="relative min-h-screen bg-cover bg-center"
+        style={{ backgroundImage: `url(${logo})` }}
+    >
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
 
+        {/* Content */}
+        
+            <div className="relative z-10 flex items-center justify-center min-h-screen px-6">
 
-  return (
-    <div className="min-h-screen bg-linear-to-br from-blue-50 to-indigo-100">
+                <div className="max-w-3xl text-center">
 
-      <Navbar />
+                    <span className="text-green-400 text-lg font-semibold">
+                        🌾 Rural India • AI • Government Schemes
+                    </span>
 
-      <Hero />
+                    <h1 className="mt-4 text-6xl lg:text-7xl font-black text-white leading-tight">
+                        GramSathi AI
+                    </h1>
 
-      {/* Toggle Buttons */}
-      <div className="flex justify-center gap-4 mb-8">
+                    <p className="mt-6 text-2xl text-gray-200">
+                        Find Government Schemes with Artificial Intelligence.
+                    </p>
 
-        <button
-          onClick={() => setMode("form")}
-          className={`px-6 py-3 rounded-lg font-semibold transition ${
-            mode === "form"
-              ? "bg-blue-600 text-white"
-              : "bg-white text-gray-700 border"
-          }`}
-        >
-          📝 Fill Form
-        </button>
+                    <p className="mt-4 text-gray-300 text-lg leading-8">
+                        Discover schemes you're eligible for, chat in your own
+                        language and receive personalized recommendations in
+                        seconds.
+                    </p>
 
-        <button
-          onClick={() => setMode("chat")}
-          className={`px-6 py-3 rounded-lg font-semibold transition ${
-            mode === "chat"
-              ? "bg-green-600 text-white"
-              : "bg-white text-gray-700 border"
-          }`}
-        >
-          🤖 Chat with AI
-        </button>
+                    <div className="flex justify-center gap-6 mt-10">
 
-      </div>
+                        <button
+                            onClick={() => navigate("/form")}
+                            className="bg-green-600 hover:bg-green-700 px-8 py-4 rounded-xl text-lg font-semibold text-white shadow-xl transition duration-300 hover:scale-105"
+                        >
+                            📋 Check Eligibility
+                        </button>
 
-       <div className="flex justify-center" style={{ marginTop: "25px"}}>
-      {mode === "form" ? 
-      <EligibilityForm /> : <ChatBot />}
-       </div>
-    </div>
-  );
+                        <button
+                            onClick={() => navigate("/chat")}
+                            className="bg-white/15 border border-white/30 backdrop-blur-md hover:bg-white/25 px-8 py-4 rounded-xl text-lg font-semibold text-white shadow-xl transition duration-300 hover:scale-105"
+                        >
+                            🤖 Talk to AI
+                        </button>
+
+                    </div>
+
+                    <div className="flex justify-center gap-8 mt-16 text-gray-300">
+
+                        <div>🎤 Voice Enabled</div>
+
+                        <div>🌍 Multilingual</div>
+
+                        <div>⚡ AI Powered</div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+);
+    
 }
 
-export default App;
+export default Home;
