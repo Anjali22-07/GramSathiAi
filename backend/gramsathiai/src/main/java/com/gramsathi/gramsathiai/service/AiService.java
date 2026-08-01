@@ -1,7 +1,9 @@
 package com.gramsathi.gramsathiai.service;
 
+import com.gramsathi.gramsathiai.dto.EligibilityResponse;
+
 public interface AiService {
 
-     String processMessage(String message);
+     EligibilityResponse processMessage(String message);
 
 }

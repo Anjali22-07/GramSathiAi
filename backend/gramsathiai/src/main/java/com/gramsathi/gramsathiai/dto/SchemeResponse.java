@@ -14,12 +14,12 @@ import lombok.Setter;
 @NoArgsConstructor
 public class SchemeResponse {
 
-    private UUID sId;
+    private UUID schemeId;
     private String SchemeName;
     private String description;
     private String benefits;
     private String documentsRequired;
-    private String officialURL;
+    private String url;
 
 
 }
