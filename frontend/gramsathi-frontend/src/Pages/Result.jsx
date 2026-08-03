@@ -114,7 +114,7 @@ function ResultPage() {
 
           <div className="flex flex-col gap-6">
 
-            <h2 className="text-2xl border-white font-bold text-gray-800 mb-6">
+            <h2 className="text-2xl border-white font-bold text-gray-800 gap-3 mb-10 mr-16">
                Eligible Schemes
             </h2>
 
