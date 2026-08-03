@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 import api from "../Services/api";
 
 function EligibilityForm() {
@@ -14,6 +16,9 @@ function EligibilityForm() {
         isDisable: false
     });
 
+    const navigate = useNavigate();
+    const [loading, setLoading] = useState(false);
+
     const handleChange = (e) => {
 
         const { name, value, type, checked } = e.target;
@@ -25,26 +30,52 @@ function EligibilityForm() {
 
     };
 
-   const handleSubmit = async (e) => {
+  const handleSubmit = async (e) => {
+
     e.preventDefault();
 
+    setLoading(true);
+
     try {
-        const response = await api.post("/eligible", formData);
-        setResult(response.data);
-    } catch (error) {
-        console.error(error);
+
+        const response = await api.post("/citizen/checkEligibility", formData);
+
+        console.log(response.data);
+
+       navigate("/result", {
+        state: {
+            result: response.data,
+            formData: formData,
+        },
+});
+
+    } catch (error){
+
+    console.error("Error:", error);
+
+    console.log(error.response);
+    console.log(error.response?.data);
+    console.log(error.response?.status);
+
+    alert("Failed to fetch schemes.");
+
+} finally {
+
+        setLoading(false);
+
     }
+
 };
 
     return (
-      <div classname="max-w-5xl w-full mx-auto px-6">
-  <div className="bg-neutral-primary-soft border-t-6 border-gray-600 shadow-lg rounded-xl p-8">
+      <div className="max-w-5xl  mx-auto px-6">
+  <div className="bg-neutral-primary-soft border-t-6 border-green-700 shadow-lg rounded-xl p-8">
 
-    <h1 className="text-4xl font-bold text-center text-gray-700">
+    <h1 className="text-4xl font-bold text-center text-green-700">
     📋 Check Your Eligibility
     </h1>
 
-    <p className="text-center text-gray-300 mt-2 mb-8">
+    <p className="text-center text-green-300 mt-2 mb-8">
         Answer a few questions and discover government schemes you may qualify for.
     </p>
 
@@ -190,13 +221,20 @@ function EligibilityForm() {
       <div className="md:col-span-2">
         <button
           type="submit"
-          className="w-full bg-gray-600 text-white p-3 rounded-lg hover:bg-gray-700"
+          className="w-full bg-green-700 text-white p-3 rounded-lg hover:bg-green-800"
         >
           Find Schemes
         </button>
       </div>
 
     </form>
+    {loading && (
+    <p className="mt-6 text-center text-blue-600">
+        Finding eligible schemes...
+    </p>
+)}
+
+
    </div>
   </div>
 );
