@@ -1,5 +1,6 @@
 package com.gramsathi.gramsathiai.controller;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,6 +14,7 @@ import lombok.AllArgsConstructor;
 
 @RestController
 @RequestMapping("/api/V1/citizen")
+@CrossOrigin(origins = "http://localhost:5173")
 @AllArgsConstructor
 public class CitizenController {
 
