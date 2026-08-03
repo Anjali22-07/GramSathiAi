@@ -135,6 +135,10 @@ Which government schemes am I eligible for?
 
 ![Form](Screenshot/Form.png)
 
+### Result page
+
+![Form](Screenshot/Result.png)
+
 ## ⚙️ Installation
 
 ### Clone the repository
