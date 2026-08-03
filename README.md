@@ -9,7 +9,6 @@ GramSathi AI is an AI-powered government scheme recommendation platform that hel
 - 🤖 AI-powered conversational interface
 - 📝 Extracts user details (age, income, occupation, state, etc.) from natural language
 - 🎯 Personalized government scheme recommendations
-- 🧠 AI-generated explanations for why a scheme is suitable
 - ⚡ Rule-based eligibility engine for accurate matching
 - 🔗 Direct links to official government scheme portals
 - 📄 Displays required documents and scheme benefits
