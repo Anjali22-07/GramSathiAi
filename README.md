@@ -137,7 +137,8 @@ Which government schemes am I eligible for?
 ### Result page
 
 ![Form](Screenshot/Result.png)
-<br/ >
+
+### ChatBotResult page
 ![Form](Screenshot/ChatBotResult.png)
 
 
