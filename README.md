@@ -189,7 +189,46 @@ GEMINI_API_KEY= API_KEY
 ### POST
 
 ```
-POST /eligible
+POST /citizen/checkEligibilty
+```
+
+Request
+
+```json
+
+{
+  "gender": "FEMALE",
+  "age": 20,
+  "income": 200000,
+  "occupation": "STUDENT",
+  "state": "Uttar Pradesh",
+  "category": "GENERAL",
+  "isBPL": false,
+  "isDisable": false
+}
+```
+
+Response
+
+```json
+{
+  "totalEligibleSchemes": 2,
+  "eligibleSchemes": [
+    {
+      "schemeName": "Post Matric Scholarship",
+      "benefits": "Scholarship assistance",
+      "documentsRequired": "Income Certificate",
+      "url": "https://..."
+    }
+  ],
+  "aiResponse": "Based on your profile, you qualify for..."
+}
+```
+
+---
+
+```
+POST /ai/chat
 ```
 
 Request
